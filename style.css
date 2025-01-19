@@ -32,4 +32,61 @@ body {
   background-color: #f9f9f9;
 }
 
+/* Buttons grid container */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 10px; /* Spacing between buttons */
+}
+
+/* Button styling */
+.buttons button {
+  height: 50px;
+  font-size: 1.2rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+.buttons button:hover {
+  background: #0056b3;
+}
+
+/* Button active effect */
+.buttons button:active {
+  background: #003f7f;
+  transform: scale(0.95);
+}
+
+/* Special button (e.g., clear) styling for differentiation */
+.buttons button:nth-child(1) {
+  background: #ff5e57; /* Red for clear button */
+}
+
+.buttons button:nth-child(1):hover {
+  background: #cc4a45;
+}
+
+.buttons button:nth-child(1):active {
+  background: #a73835;
+}
+
+/* Responsive styling */
+@media (max-width: 320px) {
+  .calculator {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  #result {
+    font-size: 1.2rem; /* Reduce font size for small screens */
+  }
+
+  .buttons button {
+    font-size: 1rem; /* Adjust button text size */
+  }
+}
 
